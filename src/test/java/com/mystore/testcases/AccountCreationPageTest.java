@@ -44,6 +44,7 @@ public class AccountCreationPageTest extends BaseClass {
 	@Test(groups = "Regression",dataProvider = "newAcountDetailsData",dataProviderClass = DataProviders.class)
 	public void createAccountTest(HashMap<String,String> hashMapValue) throws Throwable {
 		Log.startTestCase("createAccountTest");
+		System.out.println("Creating new account Test");
 		indexPage= new IndexPage();
 		loginPage=indexPage.clickOnSignIn();
 		acountCreationPage=loginPage.createNewAccount(hashMapValue.get("Email"));
